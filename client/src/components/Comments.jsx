@@ -4,9 +4,10 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useAuth, useUser } from "@clerk/clerk-react";
 import { toast } from "react-toastify";
 
+const VITE_API_URL = "https://brainwave-matrix-intern-task2.onrender.com"
 const fetchComments = async (postId) => {
   const res = await axios.get(
-    `${import.meta.env.VITE_API_URL}/comments/${postId}`
+    `${VITE_API_URL}/comments/${postId}`
   );
   return res.data;
 };
@@ -26,7 +27,7 @@ const Comments = ({ postId }) => {
     mutationFn: async (newComment) => {
       const token = await getToken();
       return axios.post(
-        `${import.meta.env.VITE_API_URL}/comments/${postId}`,
+        `${VITE_API_URL}/comments/${postId}`,
         newComment,
         {
           headers: {
