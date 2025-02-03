@@ -17,11 +17,10 @@ const Homepage = () => {
         {/* titles */}
         <div className="">
           <h1 className="text-gray-800 text-2xl md:text-5xl lg:text-6xl font-bold">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Developer's Hub: A Blog for Tech Enthusiasts 🚀
           </h1>
           <p className="mt-8 text-md md:text-xl">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi
-            rerum accusantium.
+            "Code. Share. Inspire. Elevate Your Tech Journey!" 🚀
           </p>
         </div>
         {/* animated button */}
@@ -31,7 +30,6 @@ const Homepage = () => {
             width="200"
             height="200"
             className="text-lg tracking-widest animate-spin animatedButton"
-          
           >
             <path
               id="circlePath"
@@ -70,7 +68,7 @@ const Homepage = () => {
       {/* POST LIST */}
       <div className="">
         <h1 className="my-8 text-2xl text-gray-600">Recent Posts</h1>
-        <PostList/>
+        <PostList />
       </div>
     </div>
   );
