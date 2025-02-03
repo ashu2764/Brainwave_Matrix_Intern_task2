@@ -5,6 +5,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import axios from "axios";
 
+const VITE_API_URL = "https://brainwave-matrix-intern-task2.onrender.com"
 const Comment = ({ comment, postId }) => {
   const { user } = useUser();
   const { getToken } = useAuth();
@@ -16,7 +17,7 @@ const Comment = ({ comment, postId }) => {
     mutationFn: async () => {
       const token = await getToken();
       return axios.delete(
-        `${import.meta.env.VITE_API_URL}/comments/${comment._id}`,
+        `${VITE_API_URL}/comments/${comment._id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
