@@ -4,9 +4,11 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import { format } from "timeago.js";
 
+
+const VITE_API_URL = "https://brainwave-matrix-intern-task2.onrender.com"
 const fetchPost = async () => {
   const res = await axios.get(
-    `${import.meta.env.VITE_API_URL}/posts?featured=true&limit=4&sort=newest`
+    `${VITE_API_URL}/posts?featured=true&limit=4&sort=newest`
   );
   return res.data;
 };
